@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="free"></h2>
+    <script>
+
+            function convertStringToArray(str) {
+                return str.split(' ');
+            }
+
+            const input = "Hire the top 1% freelance developers";
+
+            const output = convertStringToArray(input);
+
+            document.getElementById("free").innerHTML=(output);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="x1"></h2>
+    <h3 id="x2"></h3>
+    <h4 id="x3"></h4>
+    <script>
+            function getThirdCharacter(str) {
+                return str[2] || 'Character not found';
+            }
+
+            function alternateCase(str) {
+                return str.split('').map((char, index) => index % 2 === 0 ? char.toLowerCase() : char.toUpperCase()).join('');
+            }
+
+            function convertCase(str) {
+                return [str.toLowerCase(), str.toUpperCase()];
+            }
+
+            const x1 = "airplane";
+            const x2 = "oxoxoxox";
+            const x3 = "A New Java Book";
+
+            document.getElementById("x1").innerHTML=("Output for x1 (3rd character):", getThirdCharacter(x1));
+
+            document.getElementById("x2").innerHTML=("Output for x2 (alternating case):", alternateCase(x2));
+
+            const [lowercase, uppercase] = convertCase(x3);
+            document.getElementById("x3").innerHTML=("Output for x3 (lowercase, uppercase):", `"${lowercase}", "${uppercase}"`);
+
+    </script>
+</body>
+</html>

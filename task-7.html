@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="sorted1"></h2>
+    <h3 id="sorted2"></h3>
+    <h4 id="sorted3"></h4>
+    <h5 id="sorted4"></h5>
+    <script>
+
+function sortNumbersAscending(arr) {
+    return arr.slice().sort((a, b) => a - b);
+}
+
+function sortNumbersDescending(arr) {
+    return arr.slice().sort((a, b) => b - a);
+}
+
+function sortStringsAscending(arr) {
+    return arr.slice().sort();
+}
+
+function sortStringsDescending(arr) {
+    return arr.slice().sort().reverse();
+}
+
+const numbers = [23, 20, 17, 12, 5, 0, 1, 5, 12, 19, 20];
+const myColor = ["Red", "Green", "White", "Black"];
+
+const sortedNumbersAscending = sortNumbersAscending(numbers);
+const sortedNumbersDescending = sortNumbersDescending(numbers);
+
+const sortedColorsAscending = sortStringsAscending(myColor);
+const sortedColorsDescending = sortStringsDescending(myColor);
+
+document.getElementById("sorted1").innerHTML=("Numbers sorted in ascending order:", sortedNumbersAscending);
+document.getElementById("sorted2").innerHTML=("Numbers sorted in descending order:", sortedNumbersDescending);
+document.getElementById("sorted3").innerHTML=("Colors sorted in ascending alphabetical order:", sortedColorsAscending);
+document.getElementById("sorted4").innerHTML=("Colors sorted in descending alphabetical order:", sortedColorsDescending);
+
+
+
+    </script>
+
+</body>
+</html>

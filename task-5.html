@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="filt"></h2>
+    <script>
+                function removeNegativeValues(arr) {
+                    return arr.filter(element => element >= 0);
+                }
+
+                const numbers = [-23, -20, -17, -12, -5, 0, 1, 5, 12, 19, 20];
+
+                const filteredNumbers = removeNegativeValues(numbers);
+
+                document.getElementById("filt").innerHTML=(filteredNumbers);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="found"></h2>
+    <h3 id="not"></h3>
+    <script>
+
+            function isValueFound(arr, value) {
+                return arr.includes(value);
+            }
+
+            const numbers = [10, 20, 30, 40, 50];
+
+
+            const valueToCheck = 30;
+
+            const isFound = isValueFound(numbers, valueToCheck);
+
+            if (isFound) {
+                document.getElementById("found").innerHTML=(`The value ${valueToCheck} is found in the array.`);
+            } else {
+                document.getElementById("not").innerHTML=(`The value ${valueToCheck} is not found in the array.`);
+            }
+
+
+    </script>
+</body>
+</html>

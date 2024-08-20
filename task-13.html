@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2 id="dog"></h2>
+    <script>
+
+            function replaceWord(text, oldWord, newWord) {
+                const regex = new RegExp(oldWord, 'g');
+                return text.replace(regex, newWord);
+            }
+
+            const input = "I often take a walk with my dog in the evening. His dog follows him everywhere. I don't feed my dog in the morning";
+
+            const output = replaceWord(input, 'dog', 'cat');
+
+            document.getElementById("dog").innerHTML=(output);
+
+    </script>
+</body>
+</html>

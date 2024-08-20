@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="asci"></h2>
+    <script>
+            function convertToAscii(arr) {
+                return arr.map(element => {
+                    return element.split('').map(char => char.charCodeAt(0));
+                });
+            }
+            const array = ["A", "B", "C", "abc"];
+            const asciiArray = convertToAscii(array);
+            document.getElementById("asci").innerHTML=(asciiArray);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="for"></h2>
+    <h3 id="foreach"></h3>
+
+    <script>
+        const array = [1, 2, 3, 4, 5];
+
+        let sumForLoop = 0;
+        for (let i = 0; i < array.length; i++) {
+            sumForLoop += array[i];
+        }
+        document.getElementById("for").innerHTML=("Sum using for loop: " + sumForLoop);
+
+        let sumForEachLoop = 0;
+        array.forEach(element => {
+            sumForEachLoop += element;
+        });
+        document.getElementById("foreach").innerHTML=("Sum using forEach loop: " + sumForEachLoop);
+
+    </script>
+</body>
+</html>
